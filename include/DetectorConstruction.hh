@@ -40,7 +40,7 @@ private:
 	G4Material* fFeMaterial;                  // Fe material
 	G4Material* fGdLSMaterial;
 	G4Material* fLiLSMaterial;
-	G4Material* fLiMaterial;
+	G4Material* fLi6Material;
 	//
 	// Colour
 	//
