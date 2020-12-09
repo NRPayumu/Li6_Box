@@ -37,6 +37,7 @@ DetectorConstruction::DetectorConstruction()
 	fGdLSMaterial     = G4Material::GetMaterial("GdLS");
 	fLiLSMaterial     = G4Material::GetMaterial("LiLS");
 	fLiMaterial       = G4Material::GetMaterial("Li");
+	fLi6Material      = G4Material::GetMaterial("Li6Material");
 
 	// colour
 	white   = G4Colour(1.0,  1.0,  1.0);
