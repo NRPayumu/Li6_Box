@@ -25,16 +25,16 @@ const G4double GdLS_density = 0.857 *g/cm3;  //0.5w%
 
 //const G4double worldBoxSizeXY    = 20.0 *cm; // *cm
 //const G4double worldBoxSizeZ     = 20.0 *cm;
-const G4double worldBoxSizeXY    =100.0 *cm; // *cm
-const G4double worldBoxSizeZ     =100.0 *cm;
+const G4double worldBoxSizeXY    =10.0 *cm; // *cm
+const G4double worldBoxSizeZ     =10.0 *cm;
 
 // GdLS
 //const G4double GdLSSizeX           = 20.0 *cm; // *cm  //Primary and DetConst
 //const G4double GdLSSizeY           = 20.0 *cm; //8L
 //const G4double GdLSSizeZ           = 20.0 *cm; //1.0 *mm;
-const G4double GdLSSizeX           =100.0 *cm; // *cm  //Primary and DetConst
-const G4double GdLSSizeY           =100.0 *cm; //8L
-const G4double GdLSSizeZ           =100.0 *cm; //1.0 *mm;
+const G4double GdLSSizeX           =10.0 *cm; // *cm  //Primary and DetConst
+const G4double GdLSSizeY           =10.0 *cm; //8L
+const G4double GdLSSizeZ           =10.0 *cm; //1.0 *mm;
 
 // World
 //const G4double worldBoxSizeXY    = 10.0 *m;
