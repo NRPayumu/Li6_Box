@@ -119,11 +119,15 @@ void SteppingAction::UserSteppingAction(const G4Step* aStep)
 				if ( particleName == "e-"){
 					fEventAction->AddEmi();
 				}
-				if ( particleName == "Triton"){
+				if ( particleName == "triton"){
 					fEventAction->AddTri();
 				}
-				if ( particleName == "Alpha"){
+				if ( particleName == "alpha"){
 					fEventAction->AddAlp();
+				}
+
+				if( originedProcessName == "neutronInelastic"){
+					fEventAction->CapON();
 				}
 			}
 		}

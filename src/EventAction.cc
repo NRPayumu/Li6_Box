@@ -40,7 +40,8 @@ fCaptureEmitGamma(0),
 fCaptureEmitEplus(0),
 fCaptureEmitEminus(0),
 fCaptureEmitTriton(0),
-fCaptureEmitAlpha(0)
+fCaptureEmitAlpha(0),
+fCaptureOn(0)
 {
 	fRunAction              = run;
 	fPrimaryGeneratorAction = primary;
@@ -71,11 +72,12 @@ void EventAction::BeginOfEventAction(const G4Event* evt)
 	//fChargedGravitX = 0.,
 	//fChargedGravitY = 0.,
 	//fChargedGravitZ = 0.;
-	fCaptureEmitGamma  = 0.,
-	fCaptureEmitEplus  = 0.,
-	fCaptureEmitEminus = 0.,
-	fCaptureEmitTriton = 0.,
-	fCaptureEmitAlpha  = 0.;
+	fCaptureEmitGamma  = 0,
+	fCaptureEmitEplus  = 0,
+	fCaptureEmitEminus = 0,
+	fCaptureEmitTriton = 0,
+	fCaptureEmitAlpha  = 0,
+	fCaptureOn         = 0;
 
 	fEventID = evt -> GetEventID();
 	if (fEventID % 5000 == 0) {
@@ -169,6 +171,7 @@ void EventAction::EndOfEventAction(const G4Event* evt)
   analysisManager->FillNtupleDColumn(7, fCaptureEmitEminus);
   analysisManager->FillNtupleDColumn(8, fCaptureEmitTriton);
   analysisManager->FillNtupleDColumn(9, fCaptureEmitAlpha);
+  analysisManager->FillNtupleDColumn(10,fCaptureOn);
 
   analysisManager->AddNtupleRow();
 }

@@ -98,10 +98,10 @@ void PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
 	//fParticleGun -> SetParticleEnergy(0.025 *eV); //Thermal
 	if(Particle_Name=="e+")fParticleGun -> SetParticleEnergy(Eep *MeV);
 	if(Particle_Name=="neutron")fParticleGun -> SetParticleEnergy(En *keV);
-	if(Particle_Name=="fast_neutron")fParticleGun -> SetParticleEnergy(1 *MeV);
+	//if(Particle_Name=="fast_neutron")fParticleGun -> SetParticleEnergy(1 *MeV);
 	if(Particle_Name=="gamma")fParticleGun -> SetParticleEnergy(2 *MeV);
 	//fParticleGun -> SetParticleEnergy(0 *eV);
-
+  fParticleGun -> SetParticleEnergy(0.025 *eV);
 	//
 	// Position
 	//

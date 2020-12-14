@@ -38,11 +38,12 @@ RunAction::RunAction()
   analysisManager->CreateNtupleDColumn("Eabs");
   analysisManager->CreateNtupleDColumn("Elos");
   analysisManager->CreateNtupleDColumn("CEabs");
-  analysisManager->CreateNtupleDColumn("CaGum");
-  analysisManager->CreateNtupleDColumn("CaEpl");
-  analysisManager->CreateNtupleDColumn("CaEmi");
-  analysisManager->CreateNtupleDColumn("CaTri");
-  analysisManager->CreateNtupleDColumn("CaAlp");
+  analysisManager->CreateNtupleIColumn("CaGum");
+  analysisManager->CreateNtupleIColumn("CaEpl");
+  analysisManager->CreateNtupleIColumn("CaEmi");
+  analysisManager->CreateNtupleIColumn("CaTri");
+  analysisManager->CreateNtupleIColumn("CaAlp");
+  analysisManager->CreateNtupleIColumn("CapOn");
   analysisManager->FinishNtuple();
   /*
   analysisManager->CreateNtupleSColumn("Detector_Name");
@@ -84,11 +85,12 @@ RunAction::RunAction(G4String RootFileName)
   //analysisManager->CreateNtupleDColumn("ChaGX");
   //analysisManager->CreateNtupleDColumn("ChaGY");
   //analysisManager->CreateNtupleDColumn("ChaGZ");
-  analysisManager->CreateNtupleDColumn("CaGum");
-  analysisManager->CreateNtupleDColumn("CaEpl");
-  analysisManager->CreateNtupleDColumn("CaEmi");
-  analysisManager->CreateNtupleDColumn("CaTri");
-  analysisManager->CreateNtupleDColumn("CaAlp");
+  analysisManager->CreateNtupleIColumn("CaGum");
+  analysisManager->CreateNtupleIColumn("CaEpl");
+  analysisManager->CreateNtupleIColumn("CaEmi");
+  analysisManager->CreateNtupleIColumn("CaTri");
+  analysisManager->CreateNtupleIColumn("CaAlp");
+  analysisManager->CreateNtupleIColumn("CapON");
   analysisManager->FinishNtuple();
 
   /*

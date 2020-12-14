@@ -44,6 +44,7 @@ public:
 	void AddEmi();
 	void AddTri();
 	void AddAlp();
+	void CapON();
 
 private:
 	RunAction*              fRunAction;
@@ -74,6 +75,7 @@ private:
 	G4int     fCaptureEmitEminus;
 	G4int     fCaptureEmitTriton;
 	G4int     fCaptureEmitAlpha ;
+	G4int     fCaptureOn ;
 };
 
 inline void EventAction::SetEne(G4double e, G4double x, G4double y, G4double z){
@@ -123,6 +125,10 @@ inline void EventAction::AddTri(){
 }
 inline void EventAction::AddAlp(){
 	fCaptureEmitAlpha  += 1;
+}
+
+inline void EventAction::CapON(){
+	fCaptureOn          = 1;
 }
 
 #endif
