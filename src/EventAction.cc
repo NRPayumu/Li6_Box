@@ -166,12 +166,12 @@ void EventAction::EndOfEventAction(const G4Event* evt)
   analysisManager->FillNtupleDColumn(2, fEnergyAbs);
   analysisManager->FillNtupleDColumn(3, fEnergyLos);
   analysisManager->FillNtupleDColumn(4, fChargedAbs);
-  analysisManager->FillNtupleDColumn(5, fCaptureEmitGamma);
-  analysisManager->FillNtupleDColumn(6, fCaptureEmitEplus);
-  analysisManager->FillNtupleDColumn(7, fCaptureEmitEminus);
-  analysisManager->FillNtupleDColumn(8, fCaptureEmitTriton);
-  analysisManager->FillNtupleDColumn(9, fCaptureEmitAlpha);
-  analysisManager->FillNtupleDColumn(10,fCaptureOn);
+  analysisManager->FillNtupleIColumn(5, fCaptureEmitGamma);
+  analysisManager->FillNtupleIColumn(6, fCaptureEmitEplus);
+  analysisManager->FillNtupleIColumn(7, fCaptureEmitEminus);
+  analysisManager->FillNtupleIColumn(8, fCaptureEmitTriton);
+  analysisManager->FillNtupleIColumn(9, fCaptureEmitAlpha);
+  analysisManager->FillNtupleIColumn(10,fCaptureOn);
 
   analysisManager->AddNtupleRow();
 }
