@@ -108,7 +108,7 @@ void SteppingAction::UserSteppingAction(const G4Step* aStep)
 		fEventAction->AddLos(CurEn);
 	}
 	if(CopyN == 401){
-		if( originedProcessName == "nCapture" ){
+		//if( originedProcessName == "nCapture" ){
 			if ( preProcessName == "UserLimit"){
 				if ( particleName == "gamma"){
 					fEventAction->AddGam();
@@ -130,7 +130,7 @@ void SteppingAction::UserSteppingAction(const G4Step* aStep)
 					fEventAction->CapON();
 				}
 			}
-		}
+		//}
 		if( particleName != "proton" ){
 			fEventAction->AddEne(StDep,PosPX,PosPY,PosPZ);
 		}
