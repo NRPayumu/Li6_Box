@@ -174,7 +174,7 @@ void EventAction::EndOfEventAction(const G4Event* evt)
   analysisManager->FillNtupleIColumn(8, fCaptureEmitTriton);
   analysisManager->FillNtupleIColumn(9, fCaptureEmitAlpha);
   analysisManager->FillNtupleIColumn(10,fCaptureOn);
-  analysisManager->FillNtupleIColumn(11,fCaptureEnergy);
+  analysisManager->FillNtupleDColumn(11,fCaptureEnergy);
 
   analysisManager->AddNtupleRow();
 }
