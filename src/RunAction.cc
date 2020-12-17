@@ -44,6 +44,7 @@ RunAction::RunAction()
   analysisManager->CreateNtupleIColumn("CaTri");
   analysisManager->CreateNtupleIColumn("CaAlp");
   analysisManager->CreateNtupleIColumn("CapOn");
+  analysisManager->CreateNtupleDColumn("CapEn");
   analysisManager->FinishNtuple();
   /*
   analysisManager->CreateNtupleSColumn("Detector_Name");
@@ -91,6 +92,7 @@ RunAction::RunAction(G4String RootFileName)
   analysisManager->CreateNtupleIColumn("CaTri");
   analysisManager->CreateNtupleIColumn("CaAlp");
   analysisManager->CreateNtupleIColumn("CapON");
+  analysisManager->CreateNtupleDColumn("CapEn");
   analysisManager->FinishNtuple();
 
   /*

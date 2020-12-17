@@ -44,7 +44,7 @@ public:
 	void AddEmi();
 	void AddTri();
 	void AddAlp();
-	void CapON();
+	void CapON(G4double e);
 
 private:
 	RunAction*              fRunAction;
@@ -76,6 +76,7 @@ private:
 	G4int     fCaptureEmitTriton;
 	G4int     fCaptureEmitAlpha ;
 	G4int     fCaptureOn ;
+	G4int     fCaptureEnergy    ;
 };
 
 inline void EventAction::SetEne(G4double e, G4double x, G4double y, G4double z){
@@ -127,8 +128,9 @@ inline void EventAction::AddAlp(){
 	fCaptureEmitAlpha  += 1;
 }
 
-inline void EventAction::CapON(){
+inline void EventAction::CapON(G4double e){
 	fCaptureOn          = 1;
+	fCaptureEnergy     += e;
 }
 
 #endif

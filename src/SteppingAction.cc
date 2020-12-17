@@ -127,7 +127,7 @@ void SteppingAction::UserSteppingAction(const G4Step* aStep)
 				}
 
 				if( originedProcessName == "neutronInelastic"){
-					fEventAction->CapON();
+					fEventAction->CapON(OriEn);
 				}
 			}
 		//}
