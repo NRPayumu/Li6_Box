@@ -35,9 +35,9 @@ void root_tree_Elos(TString root_file){
 	tr->SetBranchAddress("CapEn",&CapEn);
 	const Int_t N = tr->GetEntries();
 
-	const Double_t XMIN   = 1.0e-11 * 1.0e6;
-	const Double_t XMAX   = 1.0e-4 * 1.0e6;
-	const Double_t XWIDTH = 1.0e-7 * 1.0e6;
+	const Double_t XMIN   = 0.;
+	const Double_t XMAX   = 1.0e1;
+	const Double_t XWIDTH = 1.0e-1;
 	Int_t bin = (Int_t)((XMAX - XMIN) / XWIDTH + 0.5);
 	TH1D *h1 = new TH1D("h1", "", bin, XMIN, XMAX);
 
