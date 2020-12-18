@@ -101,7 +101,7 @@ void PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
 	//if(Particle_Name=="fast_neutron")fParticleGun -> SetParticleEnergy(1 *MeV);
 	if(Particle_Name=="gamma")fParticleGun -> SetParticleEnergy(2 *MeV);
 	//fParticleGun -> SetParticleEnergy(0 *eV);
-  fParticleGun -> SetParticleEnergy(0.025 *eV);
+  fParticleGun -> SetParticleEnergy(0.025 *MeV);
 	//
 	// Position
 	//
