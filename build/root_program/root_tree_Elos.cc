@@ -24,7 +24,7 @@ void root_tree_Elos(TString root_file){
 	TCanvas *c1 = new TCanvas("c1","canvas",1300,800);
 	gStyle->SetOptStat(kFALSE);
 	gStyle->SetStripDecimals(false);
-	//gPad->SetLogy(1);
+	gPad->SetLogy(1);
 	TFile *tf = new TFile(root_file);
 	TTree *tr = (TTree*)tf->Get("Tree");
 
