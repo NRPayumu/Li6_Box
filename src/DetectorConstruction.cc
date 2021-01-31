@@ -38,6 +38,7 @@ DetectorConstruction::DetectorConstruction()
 	fLiLSMaterial     = G4Material::GetMaterial("LiLS");
 	fLiMaterial       = G4Material::GetMaterial("Li");
 	fLi6Material      = G4Material::GetMaterial("Li6Material");
+	fLABMaterial      = G4Material::GetMaterial("LAB");
 
 	// colour
 	white   = G4Colour(1.0,  1.0,  1.0);
@@ -95,7 +96,8 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
 	// Mother = World
 	G4Box*LiLSSolid   = new G4Box("LiLS", GdLSSizeX / 2.0, GdLSSizeY / 2.0, GdLSSizeZ / 2.0);
 	//G4LogicalVolume*   LiLSLogical = new G4LogicalVolume(LiLSSolid, fLiLSMaterial, "LiLS");
-	G4LogicalVolume*   LiLSLogical = new G4LogicalVolume(LiLSSolid, fLi6Material, "LiLS");
+	//G4LogicalVolume*   LiLSLogical = new G4LogicalVolume(LiLSSolid, fLi6Material, "LiLS");
+	G4LogicalVolume*   LiLSLogical = new G4LogicalVolume(LiLSSolid, fLABMaterial, "LiLS");
 	G4double LiLSPositionZ = 0*cm;
 	new G4PVPlacement(0, G4ThreeVector(0,0,LiLSPositionZ), LiLSLogical, "LiLS", worldLogical, false, copyNoLiLS);
 	G4VisAttributes* LiLSVisAtt = new G4VisAttributes(red);

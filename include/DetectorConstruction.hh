@@ -42,6 +42,7 @@ private:
 	G4Material* fLiLSMaterial;
 	G4Material* fLiMaterial;
 	G4Material* fLi6Material;
+	G4Material* fLABMaterial;
 	//
 	// Colour
 	//
