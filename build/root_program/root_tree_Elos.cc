@@ -31,7 +31,7 @@ void root_tree_Elos(TString root_file){
 	double Elos;
 	double CapEn;
 	double EnergyLoss=0;
-	//tr->SetBranchAddress("Elos",&Elos);
+	tr->SetBranchAddress("Elos",&Elos);
 	tr->SetBranchAddress("CapEn",&CapEn);
 	const Int_t N = tr->GetEntries();
 
@@ -40,6 +40,7 @@ void root_tree_Elos(TString root_file){
 	const Double_t XWIDTH = 1.0e-1;
 	Int_t bin = (Int_t)((XMAX - XMIN) / XWIDTH + 0.5);
 	TH1D *h1 = new TH1D("h1", "", bin, XMIN, XMAX);
+	TH1D *h2 = new TH1D("h2", "", bin, XMIN, XMAX);
 
 	for (Int_t ientry = 0; ientry < N; ientry++) {
 		tr->GetEntry(ientry);
@@ -47,11 +48,14 @@ void root_tree_Elos(TString root_file){
 		EnergyLoss=CapEn;
 		CapEn *= 1.0e1;
 		h1 -> Fill(EnergyLoss);
+		h2 -> Fill(Elos);
 	}
 
 	cout << h1->GetBinContent(0) << endl;
+	cout << h2->GetBinContent(0) << endl;
 
 	h1->Draw();
+	h2->Draw("same");
 /*
 	const Double_t FIT_XMIN = 10.;
 	const Double_t FIT_XMAX = 30.;
