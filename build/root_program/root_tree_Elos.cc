@@ -54,7 +54,7 @@ void root_tree_Elos(TString root_file){
 	cout << h1->GetBinContent(0) << endl;
 	cout << h2->GetBinContent(0) << endl;
 
-	h2->SetFillColor(2);
+	h2->SetColor(2);
 	h1->Draw();
 	h2->Draw("same");
 /*
