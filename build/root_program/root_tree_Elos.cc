@@ -44,13 +44,18 @@ void root_tree_Elos(TString root_file){
 	TH1D *h1 = new TH1D("h1", "", bin, XMIN, XMAX);
 	TH1D *h2 = new TH1D("h2", "", bin, XMIN, XMAX);
 
+	double E_plus_C;
+
 	for (Int_t ientry = 0; ientry < N; ientry++) {
 		tr->GetEntry(ientry);
 		//EnergyLoss=Elos;
 		EnergyLoss=CapEn;
 		CapEn *= 1.0e1;
 		h1 -> Fill(EnergyLoss);
-		h2 -> Fill(Eabs);
+		//h2 -> Fill(Eabs);
+		//h2 -> Fill(CEabs);
+		E_plus_C = Eabs+CEabs;
+		h2 -> Fill(Eabs+CEabs);
 	}
 
 	cout << h1->GetBinContent(0) << endl;
